@@ -85,33 +85,72 @@ let students = [
         hasSchoolBefore: true
     }
 ];
+
+//Q2.Print each student in this format:
+
 // for (let i = 0; i < students.length; i++) {
 
 //     if (students[i].gender === "f") {
 //         console.log(students[i].name);
 //     }
 // }
-//Print names of male students only.
+//Q3.Print names of male students only.
 //for (let i = 0 ; i < students.length ; i++) {
-    //if (students[i]. gender==="m"){
-      //  console.log(students[i].name);
-    //}
+//if (students[i]. gender==="m"){
+//  console.log(students[i].name);
 //}
-//Print names of students who have passed the admission test. Passing marks are 50.
+//}
+//Q4.Print names of students who have passed the admission test. Passing marks are 50.
 // for(let i = 0 ; i < students.length ; i++){
 // if (students[i].admissionTestScore >=50){
 //     console.log(students[i].name);
 // }
 // }
-//Print names of eligible students only (students who have internet and live in Karachi are eligible)
-// for(let i = 0 ; i < students.length ; i++) {
-//     if(students[i].hasInternet students[i].karachi){
-//  console.log (students[i].name);
-// };
+//Q5. Print names of eligible students only (students who have internet and live in Karachi are eligible)
+// for (let i = 0; i < students.length; i++) {
+//     if (students[i].hasInternet == true && students[i].address.city == "Karachi") {
+//         console.log(students[i].name);
+//     }
 // }
- for(let i = 0 ; i < students.length ; i++) {
-if(students(i).hasJob=== true|| studend(i).hasSchoolBefore===true){
+//Q6.Print address of each student in this format:
+// Amna's address:
+// Gulistan-e-Johar in Karachi, Pakistan
+
+// for (let i = 0; i < students.length; i++) {
+//     console.log (students[i].name + "'s Address: \n" + students[i].address.ilaqa + "in" + students[i].address.city + " , " + students[i].address.country)
+//     console.log(" ");
+// }
+//    Q7.Print names and phone number of students who have Ufone.
+
+// for (let i = 0; i < students.length; i++) {
+//     if (students[i].phoneNo.charAt(2) == "3") {
+//         console.log(students[i].name + "\n" + students[i].phoneNo + "\n" + "ufon\n")
+//     }
+// }
+
+//Q8.Students who have a job or a class are placed in Group B. Print the names of students in Group A, and in Group B, in the below format:
+// let groupA = [];
+// let groupB = [];
+//  for(let i = 0 ; i < students.length ; i++) {
+// if(students[i].hasJob=== true || students[i].hasSchoolBefore===true){
+//      groupB.push(students[i].name)
+// }
+// else{
+//     groupA.push(students[i].name)
+// }
+//  }
+//  console.log("group")
+//Q9.Print age of each student in the below format:
+// for (let i = 0; i < students.length; i++) {
+//       if(students[i].dob.getFullYear()  )
+//       console.log(students[i].name);
+// }
+
+// Q10.Print the name of the oldest student
+
+let today = new Date()
+for( let i = 0; i < students.length; i++){
+  let age = today.getFullYear() - students[i].dob.getFullYear();
+
+  console.log(students[i].name + "'s age is " + age +  " years");
 }
- }
- console.log("group A": " +group.join(' , ;));
- console.log("group B": " +group.join(' , ;));
